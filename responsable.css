@@ -1,0 +1,1055 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #080808;
+    color: #fff;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+.container {
+    width: min(1200px, 90%);
+    margin: auto;
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(8, 8, 8, 0.95);
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+    backdrop-filter: blur(15px);
+}
+
+.header-container {
+    width: min(1250px, 92%);
+    margin: auto;
+
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 25px;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+
+    line-height: 1;
+
+    font-family: "Oswald", sans-serif;
+}
+
+.logo span {
+    color: #aaa;
+    font-size: 11px;
+    letter-spacing: 3px;
+}
+
+.logo strong {
+    color: #e63946;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+
+.navigation {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navigation a {
+    color: #aaa;
+
+    font-size: 12px;
+    font-weight: 600;
+
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    transition: 0.3s;
+}
+
+.navigation a:hover,
+.navigation a.active {
+    color: #e63946;
+}
+
+.navigation i {
+    font-size: 12px;
+}
+
+.back-button {
+    padding: 10px 17px;
+
+    border: 1px solid rgba(255,255,255,0.15);
+
+    border-radius: 30px;
+
+    color: #fff;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.back-button:hover {
+    background: #e63946;
+    border-color: #e63946;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 650px;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.72),
+            rgba(0,0,0,0.88)
+        ),
+        url("PA1.jpeg") center/cover no-repeat;
+
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(230,57,70,0.12),
+            transparent 55%
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    width: min(850px, 90%);
+}
+
+.hero-small-title {
+    color: #e63946;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 4px;
+}
+
+.hero h1 {
+    margin: 20px 0;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: clamp(45px, 7vw, 85px);
+
+    line-height: 1.05;
+
+    text-transform: uppercase;
+}
+
+.hero h1 span {
+    display: block;
+    color: #e63946;
+}
+
+.hero p {
+    max-width: 680px;
+    margin: auto;
+
+    color: #bbb;
+
+    font-size: 16px;
+}
+
+.hero-button {
+    display: inline-flex;
+
+    align-items: center;
+    gap: 10px;
+
+    margin-top: 35px;
+
+    padding: 14px 24px;
+
+    background: #e63946;
+
+    border-radius: 30px;
+
+    color: #fff;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+    background: #fff;
+    color: #e63946;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   TITRES
+========================================= */
+
+.section-heading {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 55px;
+}
+
+.section-heading.left {
+    text-align: left;
+    margin-left: 0;
+}
+
+.section-heading > span {
+    color: #e63946;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+.section-heading h2 {
+    margin: 15px 0;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: clamp(32px, 5vw, 50px);
+
+    line-height: 1.15;
+}
+
+.section-heading h2 strong {
+    color: #e63946;
+}
+
+.section-heading p {
+    color: #888;
+}
+
+
+/* =========================================
+   BIOGRAPHIE
+========================================= */
+
+.biographie-section {
+    padding: 110px 0;
+    background: #0b0b0b;
+}
+
+.bio-card {
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+
+    overflow: hidden;
+
+    background: #151515;
+
+    border: 1px solid rgba(255,255,255,0.08);
+
+    border-radius: 20px;
+
+    box-shadow: 0 25px 70px rgba(0,0,0,0.4);
+}
+
+.bio-photo {
+    position: relative;
+
+    min-height: 620px;
+
+    overflow: hidden;
+}
+
+.bio-photo img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.6s;
+}
+
+.bio-card:hover .bio-photo img {
+    transform: scale(1.04);
+}
+
+.photo-label {
+    position: absolute;
+
+    left: 25px;
+    bottom: 25px;
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 13px 18px;
+
+    background: rgba(0,0,0,0.88);
+
+    border-left: 3px solid #e63946;
+
+    border-radius: 7px;
+}
+
+.photo-label > i {
+    color: #e63946;
+    font-size: 20px;
+}
+
+.photo-label small,
+.photo-label strong {
+    display: block;
+}
+
+.photo-label small {
+    color: #888;
+    font-size: 9px;
+    letter-spacing: 2px;
+}
+
+.photo-label strong {
+    color: #fff;
+    font-size: 13px;
+}
+
+.bio-content {
+    padding: 65px 55px;
+}
+
+.profession {
+    color: #e63946;
+
+    font-size: 11px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+.bio-content h3 {
+    margin: 8px 0 25px;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 55px;
+}
+
+.bio-content p {
+    margin-bottom: 17px;
+
+    color: #999;
+
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+.bio-content .intro {
+    color: #bbb;
+}
+
+.bio-content strong {
+    color: #fff;
+}
+
+
+/* =========================================
+   STATISTIQUES
+========================================= */
+
+.stats-section {
+    padding: 70px 0;
+
+    background: #101010;
+
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.stat-box {
+    padding: 30px 20px;
+
+    text-align: center;
+
+    background: #151515;
+
+    border: 1px solid rgba(255,255,255,0.07);
+
+    border-radius: 12px;
+
+    transition: 0.3s;
+}
+
+.stat-box:hover {
+    transform: translateY(-5px);
+    border-color: rgba(230,57,70,0.4);
+}
+
+.stat-box i {
+    color: #e63946;
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.stat-box strong {
+    display: block;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 38px;
+}
+
+.stat-box span {
+    display: block;
+
+    color: #777;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   CERTIFICATION
+========================================= */
+
+.certification-section {
+    padding: 100px 0;
+
+    background: #0b0b0b;
+}
+
+.certification-card {
+    display: grid;
+
+    grid-template-columns: auto 1fr auto;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding: 40px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #191919,
+            #101010
+        );
+
+    border: 1px solid rgba(230,57,70,0.25);
+
+    border-radius: 15px;
+}
+
+.certificate-icon {
+    width: 75px;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(230,57,70,0.1);
+
+    color: #e63946;
+
+    font-size: 30px;
+}
+
+.certificate-content > span {
+    color: #e63946;
+
+    font-size: 10px;
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.certificate-content h2 {
+    margin: 5px 0 8px;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 28px;
+}
+
+.certificate-content p {
+    color: #888;
+
+    font-size: 14px;
+}
+
+.certificate-content strong {
+    color: #fff;
+}
+
+.certificate-year {
+    text-align: center;
+}
+
+.certificate-year strong {
+    display: block;
+
+    color: #e63946;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 45px;
+}
+
+.certificate-year span {
+    color: #777;
+    font-size: 10px;
+}
+
+
+/* =========================================
+   SPÉCIALITÉS
+========================================= */
+
+.specialites-section {
+    padding: 110px 0;
+
+    background: #101010;
+}
+
+.specialites-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.specialite-card {
+    padding: 35px;
+
+    background: #171717;
+
+    border: 1px solid rgba(255,255,255,0.07);
+
+    border-radius: 12px;
+
+    transition: 0.35s;
+}
+
+.specialite-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(230,57,70,0.4);
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+}
+
+.specialite-icon {
+    width: 55px;
+    height: 55px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 22px;
+
+    background: rgba(230,57,70,0.1);
+
+    color: #e63946;
+
+    border-radius: 10px;
+
+    font-size: 22px;
+}
+
+.specialite-card h3 {
+    margin-bottom: 10px;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 23px;
+}
+
+.specialite-card p {
+    color: #888;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+
+/* =========================================
+   PHILOSOPHIE
+========================================= */
+
+.philosophie-section {
+    padding: 110px 0;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.85),
+            rgba(0,0,0,0.9)
+        ),
+        url("PA1.jpeg") center/cover fixed;
+}
+
+.philosophie-card {
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 70px 50px;
+
+    text-align: center;
+
+    background: rgba(15,15,15,0.9);
+
+    border: 1px solid rgba(255,255,255,0.1);
+
+    border-radius: 15px;
+}
+
+.quote-icon {
+    color: #e63946;
+
+    font-size: 35px;
+
+    margin-bottom: 25px;
+}
+
+.philosophie-card h2 {
+    font-family: "Oswald", sans-serif;
+
+    font-size: clamp(30px, 5vw, 48px);
+
+    line-height: 1.2;
+}
+
+.philosophie-card p {
+    max-width: 650px;
+
+    margin: 25px auto;
+
+    color: #999;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+.line {
+    width: 60px;
+    height: 3px;
+
+    margin: 25px auto;
+
+    background: #e63946;
+}
+
+.philosophie-card > strong {
+    display: block;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 20px;
+}
+
+.philosophie-card > span {
+    color: #777;
+
+    font-size: 11px;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.cta-section {
+    padding: 100px 0;
+
+    background: #e63946;
+
+    text-align: center;
+}
+
+.cta-content {
+    max-width: 800px;
+    margin: auto;
+}
+
+.cta-content > span {
+    font-size: 11px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+
+    color: rgba(255,255,255,0.7);
+}
+
+.cta-content h2 {
+    margin: 15px 0;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: clamp(35px, 5vw, 55px);
+
+    line-height: 1.15;
+}
+
+.cta-content p {
+    color: rgba(255,255,255,0.8);
+}
+
+.cta-buttons {
+    margin-top: 30px;
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 12px;
+
+    flex-wrap: wrap;
+}
+
+.cta-primary,
+.cta-secondary {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 9px;
+
+    padding: 13px 20px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.cta-primary {
+    background: #fff;
+    color: #e63946;
+}
+
+.cta-secondary {
+    border: 1px solid rgba(255,255,255,0.5);
+    color: #fff;
+}
+
+.cta-primary:hover,
+.cta-secondary:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================================
+   FOOTER
+========================================= */
+
+.footer {
+    background: #050505;
+
+    padding-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    padding-bottom: 40px;
+}
+
+.footer-logo {
+    font-family: "Oswald", sans-serif;
+
+    font-size: 25px;
+}
+
+.footer-logo strong {
+    color: #e63946;
+}
+
+.footer-content p {
+    max-width: 400px;
+
+    margin-top: 10px;
+
+    color: #666;
+
+    font-size: 12px;
+}
+
+.footer-links {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 20px;
+
+    align-items: center;
+}
+
+.footer-links a {
+    color: #777;
+
+    font-size: 12px;
+
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #e63946;
+}
+
+.footer-bottom {
+    padding: 20px;
+
+    text-align: center;
+
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.footer-bottom p {
+    color: #555;
+
+    font-size: 10px;
+}
+
+
+/* =========================================
+   TABLETTE
+========================================= */
+
+@media (max-width: 950px) {
+
+    .navigation {
+        gap: 12px;
+    }
+
+    .navigation a {
+        font-size: 11px;
+    }
+
+    .bio-card {
+        grid-template-columns: 1fr;
+    }
+
+    .bio-photo {
+        min-height: 550px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .specialites-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+    .header-container {
+        min-height: 65px;
+    }
+
+    .navigation {
+        display: none;
+    }
+
+    .logo strong {
+        font-size: 23px;
+    }
+
+    .back-button {
+        font-size: 11px;
+        padding: 9px 13px;
+    }
+
+    .hero {
+        min-height: 580px;
+    }
+
+    .hero-small-title {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+    .biographie-section,
+    .specialites-section,
+    .certification-section,
+    .philosophie-section {
+        padding: 75px 0;
+    }
+
+    .bio-photo {
+        min-height: 450px;
+    }
+
+    .bio-content {
+        padding: 40px 25px;
+    }
+
+    .bio-content h3 {
+        font-size: 42px;
+    }
+
+    .bio-content p {
+        font-size: 14px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .stat-box {
+        padding: 25px 10px;
+    }
+
+    .stat-box strong {
+        font-size: 30px;
+    }
+
+    .specialites-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .certification-card {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+
+        padding: 30px 20px;
+    }
+
+    .certificate-icon {
+        margin: auto;
+    }
+
+    .footer-content {
+        flex-direction: column;
+    }
+
+    .footer-links {
+        justify-content: flex-start;
+    }
+
+}
+
+@media (max-width: 400px) {
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .bio-photo {
+        min-height: 400px;
+    }
+
+}
+.signature-createur {
+    padding: 25px 20px;
+    text-align: center;
+    background: #050505;
+    border-top: 1px solid rgba(255,255,255,0.06);
+}
+
+.signature-createur span {
+    color: #666;
+    font-size: 11px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.signature-createur strong {
+    color: #e63946;
+    font-family: "Oswald", sans-serif;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
