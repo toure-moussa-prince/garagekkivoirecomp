@@ -217,6 +217,7 @@ faqItems.forEach(item => {
 });
 
 
+
 /* =====================================================
    FORMULAIRE
 ===================================================== */
@@ -227,9 +228,8 @@ const contactForm =
 const formMessage =
     document.getElementById("form-message");
 
-contactForm.addEventListener("submit", (event) => {
 
-    event.preventDefault();
+contactForm.addEventListener("submit", (event) => {
 
     const name =
         document.getElementById("nom").value.trim();
@@ -237,13 +237,13 @@ contactForm.addEventListener("submit", (event) => {
     const phone =
         document.getElementById("telephone").value.trim();
 
-    const service =
-        document.getElementById("service").value;
-
     const message =
         document.getElementById("message").value.trim();
 
+
     if (!name || !phone || !message) {
+
+        event.preventDefault();
 
         formMessage.textContent =
             "Veuillez remplir les champs obligatoires.";
@@ -255,9 +255,13 @@ contactForm.addEventListener("submit", (event) => {
     }
 
     formMessage.textContent =
-        "Votre message est prêt à être envoyé.";
+        "Envoi de votre message...";
 
     formMessage.style.color = "#25d366";
+
+});
+
+            
 
     /*
        IMPORTANT :
@@ -271,7 +275,6 @@ contactForm.addEventListener("submit", (event) => {
 
     contactForm.reset();
 
-});
 
 
 /* =====================================================
