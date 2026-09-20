@@ -1,0 +1,578 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #090909;
+    color: #ffffff;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    height: 85px;
+    padding: 0 7%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: #090909;
+
+    border-bottom: 1px solid rgba(220, 0, 0, 0.35);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-box {
+    width: 48px;
+    height: 48px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #d60000;
+    color: white;
+
+    font-size: 22px;
+}
+
+.logo h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 22px;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    font-size: 9px;
+    letter-spacing: 2px;
+    color: #e00000;
+}
+
+.back-btn {
+    padding: 11px 18px;
+
+    border: 1px solid #d60000;
+    color: #ff1a1a;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.back-btn:hover {
+    background: #d60000;
+    color: white;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 8%;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.97),
+            rgba(0, 0, 0, 0.75),
+            rgba(0, 0, 0, 0.45)
+        ),
+        url("images/diagnostic.jpg");
+
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-content {
+    max-width: 780px;
+}
+
+.small-title {
+    color: #ff1616;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.small-title i {
+    margin-right: 8px;
+}
+
+.hero h2 {
+    margin-top: 20px;
+
+    font-family: 'Oswald', sans-serif;
+
+    font-size: clamp(55px, 8vw, 105px);
+
+    line-height: 0.95;
+
+    letter-spacing: 2px;
+}
+
+.hero h2 strong {
+    display: block;
+
+    color: #e00000;
+}
+
+.hero p {
+    max-width: 650px;
+
+    margin: 30px 0;
+
+    color: #d0d0d0;
+
+    font-size: 17px;
+}
+
+.hero-btn,
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px 24px;
+
+    background: #d60000;
+    color: white;
+
+    font-weight: 700;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.hero-btn:hover,
+.contact-btn:hover {
+    background: #ff0000;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 25px rgba(220, 0, 0, 0.35);
+}
+
+
+/* =========================
+   TITRES
+========================= */
+
+.section-title {
+    max-width: 850px;
+
+    margin-bottom: 45px;
+}
+
+.section-title.center {
+    text-align: center;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title span {
+    color: #e00000;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.section-title h2 {
+    margin-top: 10px;
+
+    font-family: 'Oswald', sans-serif;
+
+    font-size: clamp(35px, 5vw, 55px);
+
+    line-height: 1.15;
+}
+
+.section-title h2 strong {
+    color: #e00000;
+}
+
+
+/* =========================
+   INTRODUCTION
+========================= */
+
+.introduction {
+    padding: 100px 8%;
+
+    background: #101010;
+}
+
+.intro-text {
+    max-width: 900px;
+
+    color: #bdbdbd;
+
+    font-size: 16px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+.services {
+    padding: 100px 8%;
+
+    background: #090909;
+}
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 22px;
+}
+
+.service-card {
+    padding: 35px 30px;
+
+    background: #121212;
+
+    border: 1px solid #292929;
+
+    transition: 0.35s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #d60000;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+.icon {
+    width: 60px;
+    height: 60px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 25px;
+
+    background: rgba(214, 0, 0, 0.12);
+
+    color: #ff1717;
+
+    font-size: 24px;
+}
+
+.service-card h3 {
+    font-family: 'Oswald', sans-serif;
+
+    font-size: 23px;
+
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #a8a8a8;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   WARNING
+========================= */
+
+.warning {
+    padding: 70px 8%;
+
+    background: #d60000;
+
+    color: white;
+}
+
+.warning-content {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+}
+
+.warning-icon {
+    font-size: 55px;
+}
+
+.warning span {
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.warning h2 {
+    margin: 5px 0;
+
+    font-family: 'Oswald', sans-serif;
+
+    font-size: 38px;
+}
+
+.warning p {
+    max-width: 850px;
+}
+
+
+/* =========================
+   PROBLÈMES
+========================= */
+
+.problems {
+    padding: 100px 8%;
+
+    background: #101010;
+}
+
+.problems-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.problem {
+    padding: 30px;
+
+    border: 1px solid #292929;
+
+    background: #141414;
+
+    transition: 0.3s;
+}
+
+.problem:hover {
+    border-color: #d60000;
+
+    transform: translateY(-5px);
+}
+
+.problem i {
+    color: #ed0000;
+
+    font-size: 27px;
+
+    margin-bottom: 15px;
+}
+
+.problem h3 {
+    font-family: 'Oswald', sans-serif;
+
+    font-size: 21px;
+
+    margin-bottom: 8px;
+}
+
+.problem p {
+    color: #999;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   PROCESSUS
+========================= */
+
+.process {
+    padding: 100px 8%;
+
+    background: #090909;
+}
+
+.steps {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.step {
+    position: relative;
+
+    padding: 30px;
+
+    background: #131313;
+
+    border-top: 3px solid #d60000;
+}
+
+.number {
+    font-family: 'Oswald', sans-serif;
+
+    font-size: 45px;
+
+    color: #e00000;
+
+    margin-bottom: 15px;
+}
+
+.step h3 {
+    font-family: 'Oswald', sans-serif;
+
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+.step p {
+    color: #999;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    padding: 100px 8%;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(0, 0, 0, 0.80),
+            rgba(0, 0, 0, 0.90)
+        ),
+        url("images/garage.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.contact-section span {
+    color: #ff1616;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.contact-section h2 {
+    margin: 15px 0;
+
+    font-family: 'Oswald', sans-serif;
+
+    font-size: clamp(40px, 6vw, 65px);
+}
+
+.contact-section p {
+    max-width: 650px;
+
+    margin: 0 auto 30px;
+
+    color: #ccc;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    padding: 45px 8%;
+
+    text-align: center;
+
+    background: #050505;
+
+    border-top: 1px solid #292929;
+}
+
+.footer-logo {
+    font-family: 'Oswald', sans-serif;
+
+    font-size: 25px;
+
+    color: #e00000;
+
+    letter-spacing: 3px;
+}
+
+footer p {
+    color: #888;
+
+    font-size: 12px;
+
+    margin-top: 8px;
+}
+
+.copyright {
+    margin-top: 25px !important;
+
+    color: #555 !important;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width){}

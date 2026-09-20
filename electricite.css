@@ -1,0 +1,888 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #0b0b0b;
+    color: #fff;
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+    min-height: 80px;
+    padding: 15px 7%;
+
+    background: #080808;
+
+    border-bottom: 1px solid rgba(255, 0, 0, 0.25);
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo span {
+    font-family: "Oswald", sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.logo small {
+    color: #e00000;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+.navbar a {
+    font-size: 13px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #e00000;
+}
+
+.header-btn {
+    padding: 12px 20px;
+    background: #d90000;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.header-btn:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 650px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 8%;
+
+    position: relative;
+
+    background:
+        linear-gradient(rgba(0,0,0,.72), rgba(0,0,0,.88)),
+        url("images/electricite.jpg") center/cover no-repeat;
+}
+
+.hero-content {
+    max-width: 850px;
+    position: relative;
+    z-index: 2;
+}
+
+.hero-tag {
+    color: #e00000;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    letter-spacing: 3px;
+}
+
+.hero h1 {
+    font-family: "Oswald", sans-serif;
+
+    font-size: clamp(50px, 8vw, 100px);
+
+    line-height: 1;
+
+    margin: 20px 0;
+
+    text-transform: uppercase;
+}
+
+.hero h1 span {
+    display: block;
+    color: #e00000;
+}
+
+.hero p {
+    max-width: 650px;
+
+    font-size: 18px;
+
+    color: #ddd;
+
+    margin-bottom: 35px;
+}
+
+.hero-btn,
+.cta-btn {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 15px 25px;
+
+    background: #d90000;
+
+    font-weight: 700;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+}
+
+.hero-btn:hover,
+.cta-btn:hover {
+    background: #fff;
+    color: #000;
+
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   TITRES
+========================= */
+
+.section-title {
+    text-align: center;
+
+    max-width: 850px;
+
+    margin: 0 auto 60px;
+}
+
+.section-title span,
+.diagnostic-content > span,
+.warning-title span,
+.cta-content > span {
+    color: #e00000;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+.section-title h2,
+.diagnostic-content h2,
+.warning-title h2,
+.cta-content h2 {
+    font-family: "Oswald", sans-serif;
+
+    font-size: clamp(35px, 5vw, 58px);
+
+    line-height: 1.15;
+
+    margin-top: 12px;
+}
+
+.section-title strong,
+.diagnostic-content strong,
+.warning-title strong,
+.cta-content strong {
+    color: #e00000;
+}
+
+.title-line {
+    width: 70px;
+    height: 4px;
+
+    background: #e00000;
+
+    margin: 20px auto;
+}
+
+.section-title p {
+    color: #aaa;
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    padding: 110px 8%;
+    background: #101010;
+}
+
+.intro-content {
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+}
+
+.intro-text p {
+    color: #bbb;
+
+    margin-bottom: 20px;
+}
+
+.intro-text strong {
+    color: #fff;
+}
+
+.intro-card {
+    padding: 45px 35px;
+
+    background: #171717;
+
+    border-left: 4px solid #e00000;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.3);
+}
+
+.intro-card i {
+    font-size: 45px;
+
+    color: #e00000;
+
+    margin-bottom: 20px;
+}
+
+.intro-card h3 {
+    font-family: "Oswald", sans-serif;
+
+    font-size: 27px;
+
+    margin-bottom: 12px;
+}
+
+.intro-card p {
+    color: #aaa;
+}
+
+
+/* =========================
+   PRESTATIONS
+========================= */
+
+.prestations {
+    padding: 110px 8%;
+
+    background: #0b0b0b;
+}
+
+.cards {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.service-card {
+    background: #151515;
+
+    padding: 35px 30px;
+
+    border: 1px solid #242424;
+
+    transition: 0.35s;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #e00000;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,.5);
+}
+
+.icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #e00000;
+
+    margin-bottom: 25px;
+
+    font-size: 25px;
+}
+
+.service-card h3 {
+    font-family: "Oswald", sans-serif;
+
+    font-size: 25px;
+
+    margin-bottom: 12px;
+}
+
+.service-card p {
+    color: #aaa;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+.service-card ul {
+    list-style: none;
+}
+
+.service-card li {
+    color: #ddd;
+
+    font-size: 13px;
+
+    margin: 8px 0;
+}
+
+.service-card li::before {
+    content: "✓";
+
+    color: #e00000;
+
+    font-weight: 800;
+
+    margin-right: 10px;
+}
+
+
+/* =========================
+   WARNING
+========================= */
+
+.warning {
+    padding: 100px 8%;
+
+    background: #121212;
+}
+
+.warning-container {
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.warning-title {
+    max-width: 700px;
+
+    margin-bottom: 50px;
+}
+
+.warning-grid {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 20px;
+}
+
+.warning-item {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    background: #191919;
+
+    border: 1px solid #242424;
+
+    transition: .3s;
+}
+
+.warning-item:hover {
+    border-color: #e00000;
+}
+
+.warning-item > i {
+    color: #e00000;
+
+    font-size: 25px;
+
+    min-width: 30px;
+
+    margin-top: 4px;
+}
+
+.warning-item h3 {
+    font-size: 17px;
+
+    margin-bottom: 5px;
+}
+
+.warning-item p {
+    color: #999;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   DIAGNOSTIC
+========================= */
+
+.diagnostic {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 650px;
+
+    background: #080808;
+}
+
+.diagnostic-image {
+    position: relative;
+
+    background:
+        linear-gradient(rgba(0,0,0,.25), rgba(0,0,0,.65)),
+        url("images/electricite-diagnostic.jpg") center/cover no-repeat;
+}
+
+.diagnostic-badge {
+    position: absolute;
+
+    bottom: 35px;
+    left: 35px;
+
+    background: #e00000;
+
+    padding: 15px 22px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+}
+
+.diagnostic-content {
+    padding: 90px 10%;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.diagnostic-content > p {
+    color: #aaa;
+
+    margin: 25px 0 35px;
+}
+
+.steps {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+}
+
+.step {
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 20px;
+}
+
+.step > span {
+    color: #e00000;
+
+    font-family: "Oswald", sans-serif;
+
+    font-size: 25px;
+
+    font-weight: 700;
+}
+
+.step h3 {
+    font-size: 16px;
+}
+
+.step p {
+    color: #888;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   EQUIPMENT
+========================= */
+
+.equipment {
+    padding: 110px 8%;
+
+    background: #101010;
+}
+
+.equipment-grid {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.equipment-card {
+    text-align: center;
+
+    padding: 35px 25px;
+
+    background: #171717;
+
+    border: 1px solid #252525;
+
+    transition: .3s;
+}
+
+.equipment-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #e00000;
+}
+
+.equipment-card i {
+    font-size: 35px;
+
+    color: #e00000;
+
+    margin-bottom: 18px;
+}
+
+.equipment-card h3 {
+    font-family: "Oswald", sans-serif;
+
+    font-size: 23px;
+
+    margin-bottom: 8px;
+}
+
+.equipment-card p {
+    color: #999;
+
+    font-size: 13px;
+}
+
+
+/* =========================
+   CONSEILS
+========================= */
+
+.conseils {
+    padding: 110px 8%;
+
+    background: #0b0b0b;
+}
+
+.conseils-box {
+    max-width: 950px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 30px;
+
+    padding: 40px;
+
+    background: #171717;
+
+    border: 1px solid #292929;
+}
+
+.conseil-icon {
+    width: 70px;
+    height: 70px;
+
+    min-width: 70px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #e00000;
+
+    font-size: 28px;
+}
+
+.conseils-box h3 {
+    font-family: "Oswald", sans-serif;
+
+    font-size: 27px;
+
+    margin-bottom: 12px;
+}
+
+.conseils-box p {
+    color: #aaa;
+
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+.cta {
+    padding: 120px 8%;
+
+    text-align: center;
+
+    background:
+        linear-gradient(rgba(120,0,0,.72), rgba(0,0,0,.88)),
+        url("images/garage.jpg") center/cover no-repeat;
+}
+
+.cta-content {
+    max-width: 800px;
+
+    margin: auto;
+}
+
+.cta-content h2 {
+    margin-bottom: 20px;
+}
+
+.cta-content p {
+    color: #ddd;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer {
+    padding: 60px 8% 25px;
+
+    text-align: center;
+
+    background: #050505;
+
+    border-top: 1px solid #222;
+}
+
+.footer-logo h2 {
+    font-family: "Oswald", sans-serif;
+
+    font-size: 30px;
+}
+
+.footer-logo span {
+    color: #e00000;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    font-weight: 700;
+}
+
+.footer > p {
+    color: #777;
+
+    margin: 20px 0;
+
+    font-size: 13px;
+}
+
+.footer-links {
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 25px;
+
+    margin-bottom: 30px;
+}
+
+.footer-links a {
+    font-size: 13px;
+
+    color: #aaa;
+
+    transition: .3s;
+}
+
+.footer-links a:hover {
+    color: #e00000;
+}
+
+.copyright {
+    padding-top: 25px;
+
+    border-top: 1px solid #1d1d1d;
+
+    color: #555;
+
+    font-size: 11px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 950px) {
+
+    .navbar {
+        display: none;
+    }
+
+    .header {
+        padding: 15px 5%;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .equipment-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .intro-content {
+        grid-template-columns: 1fr;
+    }
+
+    .diagnostic {
+        grid-template-columns: 1fr;
+    }
+
+    .diagnostic-image {
+        min-height: 450px;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    .header-btn {
+        display: none;
+    }
+
+    .hero {
+        min-height: 580px;
+
+        padding: 60px 7%;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .intro,
+    .prestations,
+    .warning,
+    .equipment,
+    .conseils {
+        padding: 80px 6%;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .equipment-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .warning-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .diagnostic-content {
+        padding: 70px 7%;
+    }
+
+    .conseils-box {
+        flex-direction: column;
+
+        padding: 30px;
+    }
+
+    .cta {
+        padding: 90px 7%;
+    }
+
+}
